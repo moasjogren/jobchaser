@@ -1,21 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background-dark: #272626;
+  --background-light: #faf9f6;
+
+  --font-dark: #faf9f6;
+  --font-light: #272626;
+
+  --job-background-dark: #424040;
+  --job-background-light: #e8e8e8;
+
+  --accent-dark: #1e90ff;
+  --accent-light: #2b508a;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-light);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 90vh;
+  background-image: url("/Coding.svg");
+  background-size: 40% auto;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.home-text > h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home-text > p {
+  font-size: 14px;
+  font-weight: 500;
+  width: 300px;
+}
+
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.signin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--font-light);
+}
+
+.header-content {
+  min-width: 550px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: var(--accent-light);
+}
+
+.header-logo > span {
+  color: var(--font-dark);
+  background-color: var(--accent-light);
+  border-radius: 5px;
+  margin-left: 3px;
+  padding: 0px 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-toggle {
+  color: var(--accent-light);
+}
+
+.nav-button {
+  color: var(--accent-light);
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.searchbar {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+}
+
+.searchbar > input {
+  width: 550px;
+  height: 35px;
+  padding: 10px;
+  font-family: "Open Sans";
+  color: var(--font-light);
+  border: 1px solid var(--font-light);
+  border-radius: 5px;
+  background-color: var(--background-light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.searchbar > input::placeholder {
+  color: var(--font-light);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.searchbar > input:focus {
+  outline: none;
+}
+
+.category-buttons {
+  width: 550px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-buttons > button {
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--font-light);
+  border: 1px solid var(--font-light);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.category-buttons > button.active {
+  background-color: var(--job-background-light);
+}
+
+.results {
+  color: var(--font-light);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 550px;
+}
+
+.job-list {
+  margin-bottom: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+.no-avail {
+  color: var(--font-light);
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.job {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 550px;
+  font-family: "Open Sans";
+  font-size: 10px;
+  background-color: var(--job-background-light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.job-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.job-top-text {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.company {
+  color: var(--accent-light);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.job-subtext {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.job-bottom {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  margin-bottom: 5px;
+}
+
+.sign-up-container {
+  height: 500px;
+  width: 500px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.forms > input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--font-light);
+  background-color: var(--background-light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.submit-button {
+  width: 100px;
+  align-self: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid var(--font-light);
+  color: var(--font-light);
+}
+
+.footer-top {
+  height: 130px;
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.footer-bold {
+  font-weight: 700;
+}
+
+.footer-bottom {
+  width: 550px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgray;
+  font-size: 10px;
+}
+
+.footer-logo {
+  font-weight: bolder;
+  font-size: 15px;
+  color: var(--accent-light);
+}
+
+.footer-logo > span {
+  color: var(--font-dark);
+  background-color: var(--accent-light);
+  border-radius: 5px;
+  margin-left: 1px;
+  padding: 0px 4px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons > img {
+  height: 25px;
+  width: 25px;
+}
+
+/* DARK MODE */
+
+.dark {
+  background-color: var(--background-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+
+.dark .header {
+  color: var(--font-dark);
+  border-bottom: 1px solid var(--font-dark);
+}
+
+.dark .header-logo {
+  color: var(--accent-dark);
+}
+
+.dark .header-logo > span {
+  color: var(--font-light);
+  background-color: var(--accent-dark);
+}
+
+.dark .nav-button {
+  color: var(--accent-dark);
+}
+
+.dark .theme-toggle {
+  color: var(--accent-dark);
+}
+
+.dark .searchbar > input {
+  color: var(--font-dark);
+  background-color: var(--background-dark);
+  border: 1px solid var(--font-dark);
+  border-radius: 5px;
+}
+
+.dark .searchbar > input::placeholder {
+  color: var(--font-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dark .category-buttons > button {
+  color: var(--font-dark);
+  border: 1px solid var(--font-dark);
+}
+
+.dark .category-buttons > button.active {
+  color: var(--font-light);
+  background-color: var(--font-dark);
+}
+
+.dark .home {
+  width: 100vw;
+}
+
+.dark .home-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 90vh;
+  background-image: url("/Coding-Dark.svg");
+  background-size: 40% auto;
+  background-position: right center;
+  background-repeat: no-repeat;
+  color: var(--font-dark);
+}
+
+.dark .job {
+  background-color: var(--job-background-dark);
+  color: var(--font-dark);
+}
+
+.dark .company {
+  color: var(--accent-dark);
+}
+
+.dark .results {
+  color: var(--font-dark);
+  font-weight: 600;
+}
+
+.dark .forms {
+  color: var(--font-dark);
+}
+
+.dark .forms > input {
+  border: 1px solid var(--font-dark);
+  background-color: var(--background-dark);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.dark footer {
+  border-top: 1px solid var(--font-dark);
+  color: var(--font-dark);
+  width: 100vw;
 }
