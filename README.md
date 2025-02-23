@@ -61,7 +61,7 @@ En state manager som gör att du kan deklarera state i en store-fil, och i den h
 Som tidigare nämnt finns inget inbyggt state management i React. State management är lite som att skapa återanvändbara funktioner för att deklarera och uppdatera state av komponenter. All logik och state-hantering samlas på ett ställe (och görs tillgänglig för alla komponenter), och är på så sätt lättare att läsa, överblicka och förändra. Detta är framför allt användbart när man bygger större komplexa projekt.
 
 ## VG-uppgift:
-Jag använde mig av biblioteket motion ([motion.dev]()) för att implementera två olika typer av animationer som gör min JobChaser lite mer levande. Den ena animationen förstorar det jobbkort man hovrar över. Den andra animationen är kopplad till en räknare som agerar ihop med sökresultatet. I stället för att som tidigare statiskt visa ”Result: {sökresultat.length}” räknar den initialt upp från 0 till max (i det här fallet 10). Om man sedan skriver i sökrutan räknar den ner från 10 till antal sökresultat.
+Jag använde mig av biblioteket motion ([motion.dev](https://motion.dev)) för att implementera två olika typer av animationer som gör min JobChaser lite mer levande. Den ena animationen förstorar det jobbkort man hovrar över. Den andra animationen är kopplad till en räknare som agerar ihop med sökresultatet. I stället för att som tidigare statiskt visa ”Result: {sökresultat.length}” räknar den initialt upp från 0 till max (i det här fallet 10). Om man sedan skriver i sökrutan räknar den ner från 10 till antal sökresultat.
 
 Den första animationen ligger i JobCard.tsx, den andra i Results.tsx.
 
