@@ -1,6 +1,9 @@
 "use client";
 
+// CSS
 import "./globals.css";
+
+// Kontext & komponenter
 import { ThemeProvider } from "./_context/ThemeContext";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";

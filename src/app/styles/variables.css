@@ -1,0 +1,13 @@
+:root {
+  --background-dark: #272626;
+  --background-light: #faf9f6;
+
+  --font-dark: #faf9f6;
+  --font-light: #272626;
+
+  --job-background-dark: #424040;
+  --job-background-light: #e8e8e8;
+
+  --accent-dark: #1e90ff;
+  --accent-light: #2b508a;
+}

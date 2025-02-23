@@ -1,0 +1,122 @@
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.searchbar {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+}
+
+.searchbar > input {
+  width: 550px;
+  height: 35px;
+  padding: 10px;
+  font-family: "Open Sans";
+  color: var(--font-light);
+  border: 1px solid var(--font-light);
+  border-radius: 5px;
+  background-color: var(--background-light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.searchbar > input::placeholder {
+  color: var(--font-light);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.searchbar > input:focus {
+  outline: none;
+}
+
+.category-buttons {
+  width: 550px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-buttons > button {
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--font-light);
+  border: 1px solid var(--font-light);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.category-buttons > button.active {
+  background-color: var(--job-background-light);
+}
+
+.results {
+  color: var(--font-light);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 550px;
+}
+
+.job-list {
+  margin-bottom: 40px;
+}
+
+.no-avail {
+  color: var(--font-light);
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.job {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 550px;
+  font-family: "Open Sans";
+  font-size: 10px;
+  background-color: var(--job-background-light);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.job-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.job-top-text {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.company {
+  color: var(--accent-light);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.job-subtext {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.job-bottom {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  margin-bottom: 5px;
+}

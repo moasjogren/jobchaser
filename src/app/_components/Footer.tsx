@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           <Link href="/jobs">
             <li>Jobs</li>
           </Link>
-          <Link href="/signIn">
+          <Link href="/logIn">
             <li>Log In</li>
           </Link>
           <Link href="/signUp">
@@ -43,9 +44,9 @@ export default function Footer() {
         </p>
         <p>&copy; 2025 JobChaser. No Rights Reserved.</p>
         <div className="icons">
-          <img src="/React-icon.svg" alt="" />
-          <img src="/nextjs.svg" alt="" />
-          <img src="/redux-logo-svgrepo.svg" alt="" />
+          <Image src="/React-icon.svg" alt="" width={"25"} height={"25"} />
+          <Image src="/nextjs.svg" alt="" width={"25"} height={"25"} />
+          <Image src="/redux-logo-svgrepo.svg" alt="" width={"25"} height={"25"} />
         </div>
       </div>
     </footer>

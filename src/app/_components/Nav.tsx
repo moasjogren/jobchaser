@@ -9,7 +9,7 @@ export default function Nav() {
       <Link href="/jobs">
         <button className="nav-button">Jobs</button>
       </Link>
-      <Link href="/signIn">
+      <Link href="/logIn">
         <button className="nav-button">Log In</button>
       </Link>
       <Link href="/signUp">

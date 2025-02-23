@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export interface JobProps {
   id: number;
@@ -31,7 +32,7 @@ function JobCard({
   return (
     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="job" id={id.toString()}>
       <div className="job-top">
-        <img src={logo} alt="company-logo" />
+        <Image src={logo} alt="company-logo" width={"50"} height={"50"} />
         <div className="job-top-text">
           <h4 className="company">{company}</h4>
           <h4 className="position">{position}</h4>
